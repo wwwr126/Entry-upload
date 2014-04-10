@@ -21,6 +21,7 @@
 		3A2C492B18F69EF700252C35 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A2C490D18F69EF700252C35 /* UIKit.framework */; };
 		3A2C493318F69EF700252C35 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3A2C493118F69EF700252C35 /* InfoPlist.strings */; };
 		3A2C493518F69EF700252C35 /* Entry_uploadTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A2C493418F69EF700252C35 /* Entry_uploadTests.m */; };
+		3A2C494018F6A07300252C35 /* UserData.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A2C493F18F6A07300252C35 /* UserData.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		3A2C493018F69EF700252C35 /* Entry uploadTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Entry uploadTests-Info.plist"; sourceTree = "<group>"; };
 		3A2C493218F69EF700252C35 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3A2C493418F69EF700252C35 /* Entry_uploadTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Entry_uploadTests.m; sourceTree = "<group>"; };
+		3A2C493E18F6A07300252C35 /* UserData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserData.h; sourceTree = "<group>"; };
+		3A2C493F18F6A07300252C35 /* UserData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserData.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +120,8 @@
 				3A2C491B18F69EF700252C35 /* Main.storyboard */,
 				3A2C491E18F69EF700252C35 /* ViewController.h */,
 				3A2C491F18F69EF700252C35 /* ViewController.m */,
+				3A2C493E18F6A07300252C35 /* UserData.h */,
+				3A2C493F18F6A07300252C35 /* UserData.m */,
 				3A2C492118F69EF700252C35 /* Images.xcassets */,
 				3A2C491018F69EF700252C35 /* Supporting Files */,
 			);
@@ -199,6 +204,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = qc;
 				TargetAttributes = {
+					3A2C490518F69EF600252C35 = {
+						DevelopmentTeam = 87N8U84577;
+					};
 					3A2C492618F69EF700252C35 = {
 						TestTargetID = 3A2C490518F69EF600252C35;
 					};
@@ -251,6 +259,7 @@
 			files = (
 				3A2C492018F69EF700252C35 /* ViewController.m in Sources */,
 				3A2C491A18F69EF700252C35 /* AppDelegate.m in Sources */,
+				3A2C494018F6A07300252C35 /* UserData.m in Sources */,
 				3A2C491618F69EF700252C35 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -376,6 +385,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Entry upload/Entry upload-Prefix.pch";
 				INFOPLIST_FILE = "Entry upload/Entry upload-Info.plist";
@@ -389,6 +400,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Entry upload/Entry upload-Prefix.pch";
 				INFOPLIST_FILE = "Entry upload/Entry upload-Info.plist";
