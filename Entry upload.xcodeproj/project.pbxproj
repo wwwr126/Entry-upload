@@ -22,6 +22,8 @@
 		3A2C493318F69EF700252C35 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3A2C493118F69EF700252C35 /* InfoPlist.strings */; };
 		3A2C493518F69EF700252C35 /* Entry_uploadTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A2C493418F69EF700252C35 /* Entry_uploadTests.m */; };
 		3A2C494018F6A07300252C35 /* UserData.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A2C493F18F6A07300252C35 /* UserData.m */; };
+		3A2C494318F6A13100252C35 /* RecordController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A2C494218F6A13100252C35 /* RecordController.m */; };
+		3A2C494618F6A21900252C35 /* UploadOp.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A2C494518F6A21900252C35 /* UploadOp.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,10 @@
 		3A2C493418F69EF700252C35 /* Entry_uploadTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Entry_uploadTests.m; sourceTree = "<group>"; };
 		3A2C493E18F6A07300252C35 /* UserData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserData.h; sourceTree = "<group>"; };
 		3A2C493F18F6A07300252C35 /* UserData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserData.m; sourceTree = "<group>"; };
+		3A2C494118F6A13100252C35 /* RecordController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecordController.h; sourceTree = "<group>"; };
+		3A2C494218F6A13100252C35 /* RecordController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecordController.m; sourceTree = "<group>"; };
+		3A2C494418F6A21900252C35 /* UploadOp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UploadOp.h; sourceTree = "<group>"; };
+		3A2C494518F6A21900252C35 /* UploadOp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UploadOp.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +128,10 @@
 				3A2C491F18F69EF700252C35 /* ViewController.m */,
 				3A2C493E18F6A07300252C35 /* UserData.h */,
 				3A2C493F18F6A07300252C35 /* UserData.m */,
+				3A2C494118F6A13100252C35 /* RecordController.h */,
+				3A2C494218F6A13100252C35 /* RecordController.m */,
+				3A2C494418F6A21900252C35 /* UploadOp.h */,
+				3A2C494518F6A21900252C35 /* UploadOp.m */,
 				3A2C492118F69EF700252C35 /* Images.xcassets */,
 				3A2C491018F69EF700252C35 /* Supporting Files */,
 			);
@@ -260,6 +270,8 @@
 				3A2C492018F69EF700252C35 /* ViewController.m in Sources */,
 				3A2C491A18F69EF700252C35 /* AppDelegate.m in Sources */,
 				3A2C494018F6A07300252C35 /* UserData.m in Sources */,
+				3A2C494618F6A21900252C35 /* UploadOp.m in Sources */,
+				3A2C494318F6A13100252C35 /* RecordController.m in Sources */,
 				3A2C491618F69EF700252C35 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
