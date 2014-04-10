@@ -24,6 +24,7 @@
 		3A2C494018F6A07300252C35 /* UserData.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A2C493F18F6A07300252C35 /* UserData.m */; };
 		3A2C494318F6A13100252C35 /* RecordController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A2C494218F6A13100252C35 /* RecordController.m */; };
 		3A2C494618F6A21900252C35 /* UploadOp.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A2C494518F6A21900252C35 /* UploadOp.m */; };
+		3A2C494818F6A2B000252C35 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A2C494718F6A2B000252C35 /* MobileCoreServices.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		3A2C494218F6A13100252C35 /* RecordController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecordController.m; sourceTree = "<group>"; };
 		3A2C494418F6A21900252C35 /* UploadOp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UploadOp.h; sourceTree = "<group>"; };
 		3A2C494518F6A21900252C35 /* UploadOp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UploadOp.m; sourceTree = "<group>"; };
+		3A2C494718F6A2B000252C35 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A2C494818F6A2B000252C35 /* MobileCoreServices.framework in Frameworks */,
 				3A2C490C18F69EF700252C35 /* CoreGraphics.framework in Frameworks */,
 				3A2C490E18F69EF700252C35 /* UIKit.framework in Frameworks */,
 				3A2C490A18F69EF700252C35 /* Foundation.framework in Frameworks */,
@@ -110,6 +113,7 @@
 		3A2C490818F69EF700252C35 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3A2C494718F6A2B000252C35 /* MobileCoreServices.framework */,
 				3A2C490918F69EF700252C35 /* Foundation.framework */,
 				3A2C490B18F69EF700252C35 /* CoreGraphics.framework */,
 				3A2C490D18F69EF700252C35 /* UIKit.framework */,
@@ -402,6 +406,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Entry upload/Entry upload-Prefix.pch";
 				INFOPLIST_FILE = "Entry upload/Entry upload-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -417,6 +422,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Entry upload/Entry upload-Prefix.pch";
 				INFOPLIST_FILE = "Entry upload/Entry upload-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -481,6 +487,7 @@
 				3A2C493A18F69EF700252C35 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3A2C493B18F69EF700252C35 /* Build configuration list for PBXNativeTarget "Entry uploadTests" */ = {
 			isa = XCConfigurationList;
@@ -489,6 +496,7 @@
 				3A2C493D18F69EF700252C35 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

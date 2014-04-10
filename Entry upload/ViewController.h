@@ -7,7 +7,25 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MobileCoreServices/UTCoreTypes.h>
+#import "UploadOp.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController{
+    UIImagePickerController *imagePicker;
+    UIImage *imagePicture;
+    UIImageView *imagePhoto;
+    NSString *notesToSend;
+}
+
+@property(nonatomic, retain) UIImagePickerController *imagePicker;
+
+@property (copy) NSString *notesToSend;
+
+@property (nonatomic, retain) UIImageView *imagePhoto;
+
+
+@property (nonatomic, retain) UIImage *imagePicture;
+
+- (UIImage *)imageWithImage:(UIImage *)image scaledToSize:(CGSize)newSize;
 
 @end
