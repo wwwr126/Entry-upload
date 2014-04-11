@@ -7,6 +7,9 @@
 //
 
 #import "ViewController.h"
+#import "RecordController.h"
+#import "UserData.h"
+
 
 #define FIRST_BTN_RECT	CGRectMake(32, 380, 64, 64)
 #define IMagephoto CGRectMake(0.0, 45.0, 300, 300)
@@ -25,6 +28,16 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+//    是navController
+//    UIBarButtonItem *leftButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(selectLeftAction:)];
+//    self.navigationItem.leftBarButtonItem = leftButton;
+//    UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd  target:self action:@selector(selectRightAction:)];
+//    self.navigationItem.rightBarButtonItem = rightButton;
+//    
+    
+    
+
+    
 	// Do any additional setup after loading the view, typically from a nib.
     imagePhoto=[[UIImageView alloc]initWithFrame:CGRectMake(0.0, 45.0, 300, 300)];
     
@@ -63,9 +76,19 @@
     //    [self.view addSubview:firstBtn];
 	// Do any additional setup after loading the view, typically from a nib.
     
+    
+    //		info
+    UIButton *btnInfo = [UIButton buttonWithType:UIButtonTypeInfoDark];
+    btnInfo.frame = CGRectMake(20, 10, 30, 30);
+    [btnInfo addTarget:self action:@selector(showRecords) forControlEvents:UIControlEventTouchUpInside];
+    
+
+    
     [self.view addSubview:btnchoose];
     [self.view addSubview:btnphoto];
     [self.view addSubview:btnupload];
+    [self.view addSubview:btnInfo];
+//    [self.view addSubview:btnInfo];
     //    [self.view addSubview:imagePhoto];
     
     
@@ -73,7 +96,9 @@
     [btnchoose release];
     [btnphoto release];
     [btnupload release];
+    [btnInfo release];
     [imagePhoto release];
+//    [btnInfo release];
 }
 
 - (void)didReceiveMemoryWarning
@@ -81,8 +106,35 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+//显示纪录
+- (void)showRecords
+{
+	RecordController *ctr = [[RecordController alloc] init];
+	[self.navigationController pushViewController:ctr animated:YES];
+	[ctr release];
+}
 
--(void)Uploadop
+-(void)viewDidAppear:(BOOL)animated
+{
+    self.navigationController.navigationBarHidden = YES;
+    
+}
+- (void)viewDidDisappear:(BOOL)animated
+{
+//	[self killTimer];
+}
+
+- (void)showResult:(NSString *)result
+{
+//	lblResult.text = result;
+}
+
+- (void)viewDidUnload {
+	// Release any retained subviews of the main view.
+	// e.g. self.myOutlet = nil;
+}
+
+-(void)Uploadop//上传照片
 {
     UploadOp *op = [[[UploadOp alloc] init] autorelease];
     op.imageToSend = self.imagePicture;
@@ -103,7 +155,7 @@
     [self presentModalViewController:ipc animated:YES];
 }
 
--(void)takePhoto
+-(void)takePhoto//从相册中选照片
 {
     
     UIImagePickerController *ipc = [[UIImagePickerController alloc] init];
@@ -121,6 +173,7 @@
     [notesToSend release];
     //    [btnchoose release];
     //    [btnchoose super];
+    [super dealloc];
 }
 
 
@@ -160,7 +213,6 @@
 }
 
 #pragma mark - Utilities
-
 - (UIImage *)imageWithImage:(UIImage *)image scaledToSize:(CGSize)newSize
 {
     UIGraphicsBeginImageContext( newSize );

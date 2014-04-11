@@ -7,15 +7,50 @@
 //
 
 #import "AppDelegate.h"
+#import "ViewController.h"
 
 @implementation AppDelegate
+@synthesize window;
+@synthesize navController;
+@synthesize viewController;
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+
+//- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+//{
+//    ViewController *rtCtr = [[ViewController alloc] init];
+//    self.navController = [[UINavigationController alloc]initWithRootViewController:rtCtr];
+//    self.navController.navigationBarHidden = YES;
+//    CGRect r = [UIScreen mainScreen].applicationFrame;
+//    rtCtr = [[UIView alloc]initWithFrame:r];
+//    [window addSubview:navController.view];
+//    [rtCtr release];
+//    [window makeKeyAndVisible];
+//
+////    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+////    ViewController *rootView = [[ViewController alloc] init];
+////    
+////    [rootView title:@"Root View"];
+////    self.navController = [[UINavigationController alloc] init];
+////    [self.navController pushViewController:rootView animated:YES];
+////    [self.window addSubview:self.navController.view];
+////    [self.window makeKeyAndVisible];
+//    // Override point for customization after application launch.
+//    return YES;
+//}
+
+- (void)applicationDidFinishLaunching:(UIApplication *)application
 {
-    // Override point for customization after application launch.
-    return YES;
+    ViewController *rtCtr = [[ViewController alloc] init];
+    self.navController = [[UINavigationController alloc]initWithRootViewController:rtCtr];
+    self.navController.navigationBarHidden = YES;
+    CGRect r = [UIScreen mainScreen].applicationFrame;
+    rtCtr = [[UIView alloc]initWithFrame:r];
+//    [self.navController pushViewController:rtCtr animated:YES];
+    [window addSubview: self.navController.view];
+    [rtCtr release];
+    [window makeKeyAndVisible];
 }
-							
+
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -41,6 +76,13 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+-(void)dealloc
+{
+    [navController release];
+    [window release];
+    [viewController release];
+    [super dealloc];
 }
 
 @end
