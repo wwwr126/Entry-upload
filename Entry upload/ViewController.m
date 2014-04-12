@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 #import "RecordController.h"
-#import "UserData.h"
+
 
 
 #define FIRST_BTN_RECT	CGRectMake(32, 380, 64, 64)
@@ -24,16 +24,15 @@
 @synthesize imagePicture;
 @synthesize imagePhoto;
 @synthesize notesToSend;
+@synthesize navController;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-//    是navController
-//    UIBarButtonItem *leftButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(selectLeftAction:)];
-//    self.navigationItem.leftBarButtonItem = leftButton;
-//    UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd  target:self action:@selector(selectRightAction:)];
-//    self.navigationItem.rightBarButtonItem = rightButton;
-//    
+    UIImageView *contentView = [[UIImageView alloc] initWithFrame:[[UIScreen mainScreen] applicationFrame]];
+    [contentView setImage:[UIImage imageNamed:@"baise.png"]];
+    [contentView setUserInteractionEnabled:NO];
+    [self.view sendSubviewToBack:contentView];
     
     
 
@@ -81,18 +80,18 @@
     UIButton *btnInfo = [UIButton buttonWithType:UIButtonTypeInfoDark];
     btnInfo.frame = CGRectMake(20, 10, 30, 30);
     [btnInfo addTarget:self action:@selector(showRecords) forControlEvents:UIControlEventTouchUpInside];
-    
-
+//    加入视图中
+    [self.view addSubview:contentView];
     
     [self.view addSubview:btnchoose];
     [self.view addSubview:btnphoto];
     [self.view addSubview:btnupload];
     [self.view addSubview:btnInfo];
+    [self.view addSubview:imagePhoto];
 //    [self.view addSubview:btnInfo];
     //    [self.view addSubview:imagePhoto];
-    
-    
-    
+// 释放
+    [contentView release];
     [btnchoose release];
     [btnphoto release];
     [btnupload release];
@@ -109,7 +108,7 @@
 //显示纪录
 - (void)showRecords
 {
-	RecordController *ctr = [[RecordController alloc] init];
+	STViewController *ctr = [[STViewController alloc] init];
 	[self.navigationController pushViewController:ctr animated:YES];
 	[ctr release];
 }
@@ -129,10 +128,7 @@
 //	lblResult.text = result;
 }
 
-- (void)viewDidUnload {
-	// Release any retained subviews of the main view.
-	// e.g. self.myOutlet = nil;
-}
+		
 
 -(void)Uploadop//上传照片
 {
@@ -142,6 +138,7 @@
     op.notesToSend = self.notesToSend;
     NSString *result = [op uploading];
     NSLog(@"Result of Uploading: %@", result);
+    [UserData record:@"sds" computer:@"sddd" result:result];
 }
 
 
@@ -164,7 +161,11 @@
     ipc.allowsEditing =NO;
     [self presentModalViewController:ipc animated:YES];
     //    [self presentModalViewController:imagePicker animated:YES];
+
+
 }
+
+//释放
 -(void)dealloc
 {
     [imagePicker release];

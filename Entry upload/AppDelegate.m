@@ -26,29 +26,42 @@
 //    [rtCtr release];
 //    [window makeKeyAndVisible];
 //
-////    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-////    ViewController *rootView = [[ViewController alloc] init];
-////    
-////    [rootView title:@"Root View"];
-////    self.navController = [[UINavigationController alloc] init];
-////    [self.navController pushViewController:rootView animated:YES];
-////    [self.window addSubview:self.navController.view];
-////    [self.window makeKeyAndVisible];
+//    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+//    ViewController *rootView = [[ViewController alloc] init];
+//    
+//    [rootView title:@"Root View"];
+//    self.navController = [[UINavigationController alloc] init];
+//    [self.navController pushViewController:rootView animated:YES];
+//    [self.window addSubview:self.navController.view];
+//    [self.window makeKeyAndVisible];
 //    // Override point for customization after application launch.
 //    return YES;
 //}
 
 - (void)applicationDidFinishLaunching:(UIApplication *)application
 {
-    ViewController *rtCtr = [[ViewController alloc] init];
-    self.navController = [[UINavigationController alloc]initWithRootViewController:rtCtr];
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    ViewController *rootView = [[ViewController alloc] init];
+//    rootView.title = @"rootview";
+    
+//    [rootView title:@"Root View"];
+    self.navController = [[UINavigationController alloc] init];
+    
+    [self.window addSubview:self.navController.view];
+    
+    [self.navController pushViewController:rootView animated:YES];
     self.navController.navigationBarHidden = YES;
-    CGRect r = [UIScreen mainScreen].applicationFrame;
-    rtCtr = [[UIView alloc]initWithFrame:r];
-//    [self.navController pushViewController:rtCtr animated:YES];
-    [window addSubview: self.navController.view];
-    [rtCtr release];
-    [window makeKeyAndVisible];
+    [self.window makeKeyAndVisible];
+//    ViewController *rtCtr = [[ViewController alloc] init];
+//    self.navController = [[UINavigationController alloc]initWithRootViewController:rtCtr];
+//    self.navController.navigationBarHidden = YES;
+//    CGRect r = [UIScreen mainScreen].applicationFrame;
+//    rtCtr = [[UIView alloc]initWithFrame:r];
+////    [self.navController pushViewController:rtCtr animated:YES];
+//    [window addSubview: self.navController.view];
+//    [rtCtr release];
+//    [window makeKeyAndVisible];
+    [rootView release];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

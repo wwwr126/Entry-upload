@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import <MobileCoreServices/UTCoreTypes.h>
 #import "UploadOp.h"
+#import "UserData.h"
+#import "STViewController.h"
 
 @interface ViewController : UIViewController{
     UIImagePickerController *imagePicker;
@@ -18,6 +20,8 @@
 }
 
 @property(nonatomic, retain) UIImagePickerController *imagePicker;
+
+@property (strong, nonatomic) UINavigationController *navController;
 
 @property (copy) NSString *notesToSend;
 

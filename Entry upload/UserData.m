@@ -7,7 +7,7 @@
 //
 
 #import "UserData.h"
-#define KEY_STR @"Entry upload"
+#define KEY_STR @"Entryupload"
 
 @implementation UserData
 
